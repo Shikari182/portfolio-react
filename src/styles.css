@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+.navbar nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.navbar nav ul li {
+  margin: 0 1rem;
+}
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color .3s;
+}
+.navbar nav ul li a:hover {
+  color: #007acc;
+}
+
+.hero {
+  padding: 120px 1rem 60px;
+  text-align: center;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.hero button {
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: white;
+  color: #6e8efb;
+  transition: transform .3s;
+}
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+.projects {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all .6s;
+}
+.card img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.card h3 {
+  margin: 1rem;
+}
+.card p {
+  margin: 0 1rem 1rem;
+}
+.card:hover {
+  transform: translateY(0) scale(1.02);
+}
+
+.skills {
+  padding: 4rem 1rem;
+  background: #f9f9f9;
+  text-align: center;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+.badge {
+  background: #007acc;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 50px;
+  transform: scale(0);
+  transition: transform .4s;
+}
+
+.contact {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+#contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+#contactForm label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 500;
+}
+#contactForm input,
+#contactForm textarea {
+  padding: .75rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+}
+#contactForm button {
+  padding: .75rem;
+  border: none;
+  border-radius: .5rem;
+  background: #007acc;
+  color: white;
+  cursor: pointer;
+  transition: background .3s;
+}
+#contactForm button:hover {
+  background: #005fa3;
+}
