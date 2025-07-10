@@ -11,6 +11,15 @@ body {
   background: #f4f4f4;
 }
 
+:root {
+  --github-gradient-start: #333;
+  --github-gradient-end:   #555;
+  --linkedin-gradient-start: #0a66c2;
+  --linkedin-gradient-end:   #005999;
+  --btn-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --btn-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -36,8 +45,9 @@ body {
   color: #007acc;
 }
 
+
 .hero {
-  padding: 120px 1rem 60px;
+  padding: 120px 1rem 100px;
   text-align: center;
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
@@ -49,7 +59,15 @@ body {
   margin: 1rem 0;
   font-size: 1.2rem;
 }
-.hero button {
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.hero-buttons > button {
   padding: .75rem 1.5rem;
   font-size: 1rem;
   border: none;
@@ -59,8 +77,70 @@ body {
   color: #6e8efb;
   transition: transform .3s;
 }
-.hero button:hover {
+.hero-buttons > button:hover {
   transform: scale(1.05);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1.2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease-out,
+    box-shadow 0.2s ease-out,
+    background 0.3s ease;
+  box-shadow: var(--btn-shadow);
+  color: #fff;
+}
+
+.btn-social.github {
+  background: linear-gradient(
+    to bottom right,
+    var(--github-gradient-start),
+    var(--github-gradient-end)
+  );
+}
+.btn-social.github:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--btn-shadow-hover);
+  background: linear-gradient(
+    to bottom right,
+    var(--github-gradient-end),
+    var(--github-gradient-start)
+  );
+}
+
+
+.btn-social.linkedin {
+  background: linear-gradient(
+    to bottom right,
+    var(--linkedin-gradient-start),
+    var(--linkedin-gradient-end)
+  );
+}
+.btn-social.linkedin:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: var(--btn-shadow-hover);
+  background: linear-gradient(
+    to bottom right,
+    var(--linkedin-gradient-end),
+    var(--linkedin-gradient-start)
+  );
+}
+
+.btn-social:focus {
+  outline: 2px dashed rgba(255,255,255,0.7);
+  outline-offset: 4px;
 }
 
 .projects {
@@ -83,8 +163,10 @@ body {
   transition: all .6s;
 }
 .card img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 .card h3 {
