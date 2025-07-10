@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="hero" className="hero">
       <h1>¡Hola! Soy Enrique Martín Puya</h1>
-      <p>Desarrollador/a web full‑stack apasionado/a por experiencias interactivas.</p>
+      <p>Desarrollador web full‑stack apasionado por experiencias interactivas.</p>
 
       <div className="hero-buttons">
         <button onClick={() => document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' })}>

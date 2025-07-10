@@ -1,6 +1,8 @@
 import React from 'react';
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Playwright', 'Python'];
+const skills = ['HTML', 'CSS', 'JavaScript (cliente)','TypeScript', 'React', 'Node.js', 'Playwright', 'Python', 'Pygame', 'Django', 'Flask', 'Git', 'GitHub',
+  'Angular', 'Vue.js', 'Tailwind', 'MySQL', 'MongoDB', 'Oracle', 'C', 'Selenium', 'PHP'
+];
 
 export default function Skills() {
   return (
